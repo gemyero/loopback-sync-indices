@@ -1,0 +1,20 @@
+{
+  "name": "loopback-mongo-sync-indexes",
+  "version": "1.0.0",
+  "description": "loopback script that synchronizes indexes between loopback model and mongodb collection",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "loopback",
+    "mongo",
+    "index"
+  ],
+  "author": "Mohamed Gamal <mohamedgr91@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "rxjs": "^6.5.3"
+  }
+}
