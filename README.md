@@ -1,0 +1,1 @@
+# loopback-mongo-sync-indexes
