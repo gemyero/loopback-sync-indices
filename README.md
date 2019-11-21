@@ -1,40 +1,32 @@
-# loopback-mongo-sync-indexes
+# loopback-sync-indexes
 
-A function that can be used in a [loopback](https://loopback.io/) script to sync indexes between loopback models and mongodb.
+A function that can be called with a [loopback](https://loopback.io/) application to sync indexes between loopback models and databases.
 
 ## Installation
 
 ```shell
-npm install loopback-mongo-sync-indexes
+npm install loopback-sync-indexes
 ```
 
 ## Usage
 
-Write the following code in a boot script.
 
 ```javascript
-const syncMongoIndexes = require('loopback-mongo-sync-indexes');
+const syncIndexes = require('loopback-sync-indexes');
 
-module.exports = (app) => {
-  // get mongodb datasource
-  const dataSource = app.datasources.MongoDs;
+const app = loopback();
+syncIndexes(app);
 
-  // ensure datasource is already connected
-  if (dataSource.connected) {
-    syncMongoIndexes(app, dataSource);
-  } else {
-    dataSource.once('connected', () => {
-      syncMongoIndexes(app, dataSource);
-    });
-  }
-};
 ```
 
 ## Api
 
-syncMongoIndexes(app, dataSource, maxRetries)
+syncIndexes(app, options)
 
 #### parameters
 * app: loopback application
-* dataSource: loopback mongodb datasource
-* maxRetries: maximum number of retries - default 3
+* options.maxRetryCount (Number): maximum number of retries - default 3
+* options.dropIndexes (Boolean): whether to remove unused indexes or not - default false 
+
+## Note
+### This package supports MongoDB for now and I will add other databases later.
