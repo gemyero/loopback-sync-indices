@@ -1,8 +1,12 @@
-const autoUpdateMongoModel = require('./lib/index-helpers');
+const {autoUpdateDatasourceModels, waitForBoot, findMongoDatasources, waitForConnect} = require('./lib/helpers');
 
-module.exports = (app, dataSource, maxRetries) => {
-  app
-    .models()
-    .filter(model => model.dataSource === dataSource)
-    .forEach(autoUpdateMongoModel(maxRetries));
+module.exports = (app, options = {}) => {
+  waitForBoot(app, () => {
+    const mongoDatasources = findMongoDatasources(app);
+    mongoDatasources.forEach(dataSource => {
+      waitForConnect(dataSource, () => {
+        autoUpdateDatasourceModels(app, dataSource, options);
+      });
+    });
+  });
 };
