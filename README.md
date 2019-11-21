@@ -21,7 +21,9 @@ syncIndexes(app);
 
 ## Api
 
+```javascript
 syncIndexes(app, options)
+```
 
 #### parameters
 * app: loopback application
