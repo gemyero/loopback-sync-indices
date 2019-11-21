@@ -1,8 +1,8 @@
 const {
-  autoUpdateDatasourceModels, waitForBoot, findMongoDatasources, waitForConnect,
+  autoUpdateDatasourceModels, waitForBoot, findMongoDatasources, waitForConnect, autoUpdateMongoModel,
 } = require('./lib/helpers');
 
-module.exports = (app, options = {}) => {
+const syncIndexes = (app, options = {}) => {
   waitForBoot(app, () => {
     const mongoDatasources = findMongoDatasources(app);
     mongoDatasources.forEach((dataSource) => {
@@ -12,3 +12,9 @@ module.exports = (app, options = {}) => {
     });
   });
 };
+
+Object.assign(syncIndexes, {
+  autoUpdateMongoModel,
+});
+
+module.exports = syncIndexes;
