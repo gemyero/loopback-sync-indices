@@ -1,5 +1,5 @@
 {
-  "name": "loopback-sync-indexes",
+  "name": "loopback-sync-indices",
   "version": "1.0.0",
   "description": "A function that synchronizes indexes between loopback models and databases",
   "main": "index.js",
@@ -15,7 +15,7 @@
     }
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Tests to be added\" && exit 0"
   },
   "keywords": [
     "loopback",
@@ -30,8 +30,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gemyero/loopback-sync-indexes.git"
+    "url": "https://github.com/gemyero/loopback-sync-indices.git"
   },
+  "homepage": "https://github.com/gemyero/loopback-sync-indices",
   "devDependencies": {
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",

@@ -1,18 +1,18 @@
-# loopback-sync-indexes
+# loopback-sync-indices
 
 A module exports a function that can be called with a [loopback 3](https://loopback.io/) application to sync indexes between loopback models and databases.
 
 ## Installation
 
 ```shell
-npm install loopback-sync-indexes
+npm install loopback-sync-indices
 ```
 
 ## Usage
 
 
 ```javascript
-const syncIndexes = require('loopback-sync-indexes');
+const syncIndexes = require('loopback-sync-indices');
 
 const app = loopback();
 syncIndexes(app);
