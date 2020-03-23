@@ -26,7 +26,7 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.15",
-    "rxjs": "^6.5.3"
+    "rxjs": "^6.5.4"
   },
   "repository": {
     "type": "git",
@@ -34,10 +34,10 @@
   },
   "homepage": "https://github.com/gemyero/loopback-sync-indices",
   "devDependencies": {
-    "eslint": "^6.6.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "husky": "^3.1.0",
-    "lint-staged": "^9.4.3"
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8"
   }
 }
