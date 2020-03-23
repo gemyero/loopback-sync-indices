@@ -1,6 +1,6 @@
 {
   "name": "loopback-sync-indices",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A function that synchronizes indexes between loopback models and databases",
   "main": "index.js",
   "lint-staged": {
