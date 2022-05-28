@@ -26,7 +26,7 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.15",
-    "rxjs": "^6.5.4"
+    "rxjs": "^7.0.0"
   },
   "repository": {
     "type": "git",
